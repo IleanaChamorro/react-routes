@@ -1,6 +1,8 @@
 import { BrowserRouter as Router } from 'react-router-dom'
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import Acerca from '../pages/Acerca'
+import Contacto from '../pages/Contacto'
 
 const ConceptosBasicos = () => {
   return (
@@ -13,11 +15,14 @@ const ConceptosBasicos = () => {
                     <p>Rutas en React</p>
                 </Route>
                 <Route exact path="/acerca">
-                    <h3>Acerca</h3>
+                    {/*Declarar componentes */}
+                    <Acerca/>
+                    <p>descripcion</p>
                 </Route>
-                <Route exact path="/contacto">
-                    <h3>Contacto</h3>
-                </Route>
+                {/*Invocar  componentes*/}
+                {/*<Route exact path="/contacto" component={Contacto}/>*/}
+
+                <Route exact path="/contacto" children={<Contacto/>}/>
             </Switch>
         </Router>
     </div>
