@@ -22,7 +22,13 @@ const ConceptosBasicos = () => {
                 {/*Invocar  componentes*/}
                 {/*<Route exact path="/contacto" component={Contacto}/>*/}
 
-                <Route exact path="/contacto" children={<Contacto/>}/>
+                <Route exact path="/contacto" children={
+                <>
+                <Contacto/>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est atque dolorem nihil dolores eveniet dolor pariatur explicabo consequatur dolorum facilis?</p>
+                </>
+                }
+                />
             </Switch>
         </Router>
     </div>
