@@ -9,6 +9,13 @@ html{
 *:before{
     box-sizing: inherit;
 }
+a{
+    margin-right: 1rem;
+}
 hr{
     margin: 2rem auto;
+}
+.active{
+    font-weight: bold;
+    color: #61daf6;
 }
