@@ -1,12 +1,13 @@
 import { BrowserRouter as Router } from 'react-router-dom'
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import Acerca from '../pages/Acerca'
 import Contacto from '../pages/Contacto'
 import Home from '../pages/Home'
 import Error404 from '../pages/Error404'
 import MenuConceptos from './MenuConceptos'
 import Usuario from '../pages/Usuario'
+import Producto from '../pages/Producto'
 
 const ConceptosBasicos = () => {
   return (
@@ -19,8 +20,14 @@ const ConceptosBasicos = () => {
                 <Route exact path="/acerca" component={Acerca}/>
                 <Route exact path="/contacto" component={Contacto}/>
                 <Route exact path="/usuario/:username" component={Usuario}/>
-                <Route path="*" component={Error404}/>      
-                 
+                <Route exact path="/productos" component={Producto}/>  
+                <Route exact path="/about">
+                    <Redirect to="/acerca"/>
+                </Route>
+                <Route exact path="/contact">
+                    <Redirect to="/contacto"/>
+                </Route>
+                <Route path="*" component={Error404}/>
             </Switch>
         </Router>
     </div>
