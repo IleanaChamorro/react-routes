@@ -16,6 +16,7 @@ import PrivateRoute from '../pages/PrivateRoute'
 const ConceptosBasicos = () => {
   return (
     <div>
+        <h2>Has Router</h2>
         <h2>Conceptos Básicos</h2>
         <Router>
         <MenuConceptos/>
