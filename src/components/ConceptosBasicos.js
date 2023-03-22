@@ -9,6 +9,9 @@ import MenuConceptos from './MenuConceptos'
 import Usuario from '../pages/Usuario'
 import Producto from '../pages/Producto'
 import ReactTopics from '../pages/ReactTopics'
+import Dashboard from '../pages/Dashboard'
+import Login from '../pages/Login'
+import PrivateRoute from '../pages/PrivateRoute'
 
 const ConceptosBasicos = () => {
   return (
@@ -29,6 +32,8 @@ const ConceptosBasicos = () => {
                     <Redirect to="/contacto"/>
                 </Route>
                 <Route exact path="/react" component={ReactTopics}></Route>
+                <Route exact path="/login" component={Login}></Route>
+                <PrivateRoute exact path="/dashboard" component={Dashboard}/>
                 <Route path="*" component={Error404}/>
             </Switch>
         </Router>

@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
+
 const MenuConceptos = () => {
   return (
     <nav>
@@ -50,7 +51,9 @@ const MenuConceptos = () => {
             </li>
             <li>
                 <span>Rutas privadas: </span>
-                <Link to="login">Login</Link>
+            
+                <Link to="/login">Login</Link>
+                <Link to="/dashboard">Dashboard</Link>
             </li>
         </ol>
     </nav>
